@@ -86,7 +86,7 @@ function useFetchMagic() {
                     _a.trys.push([0, 3, 4, 5]);
                     setLoading(true);
                     setError(null);
-                    return [4 /*yield*/, fetch(config.url, __assign(__assign({}, config), { headers: __assign(__assign({}, fetchMagicContext.headers), config.headers) }))];
+                    return [4 /*yield*/, fetch("".concat(fetchMagicContext.baseURL).concat(config.url), __assign(__assign({}, config), { headers: __assign(__assign({}, fetchMagicContext.headers), config.headers) }))];
                 case 1:
                     response = _a.sent();
                     if (!response.ok) {

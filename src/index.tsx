@@ -18,7 +18,7 @@ export function useFetchMagic() {
       setLoading(true);
       setError(null);
 
-      const response = await fetch(config.url, {
+      const response = await fetch(`${fetchMagicContext.baseURL}${config.url}`, {
         ...config,
         headers: {
           ...fetchMagicContext.headers,
