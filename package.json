@@ -1,6 +1,6 @@
 {
   "name": "react-fetch-magik",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "description": "An intuitive TypeScript React package for making HTTP requests using the Fetch API",
   "type": "module",
   "main": "dist/index.js",
