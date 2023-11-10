@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
-import { FetchMagicContext } from "./FetchMagicContext";
+import { FetchMagikContext } from "./FetchMagikContext";
 
-export function useFetchMagic() {
-  const fetchMagicContext = useContext(FetchMagicContext);
+export function useFetchMagik() {
+  const fetchMagikContext = useContext(FetchMagikContext);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
   const [data, setData] = useState<any | null>(null);
@@ -13,11 +13,11 @@ export function useFetchMagic() {
       setError(null);
 
       const response = await fetch(
-        `${fetchMagicContext.baseURL}${config.url}`,
+        `${fetchMagikContext.baseURL}${config.url}`,
         {
           ...config,
           headers: {
-            ...fetchMagicContext.headers,
+            ...fetchMagikContext.headers,
             ...config.headers,
           },
         }

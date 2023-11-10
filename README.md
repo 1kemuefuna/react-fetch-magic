@@ -1,45 +1,45 @@
-# React Fetch Magic
+# React Fetch Magik
 
-React Fetch Magic is a TypeScript-based React package that simplifies making HTTP requests using the JavaScript Fetch API. It provides a custom hook, `useFetchMagic`, along with `FetchMagicContext` and `FetchMagicProvider` components, which allow you to easily perform HTTP requests and set site-wide configurations within your React components.
+React Fetch Magik is a TypeScript-based React package that simplifies making HTTP requests using the JavaScript Fetch API. It provides a custom hook, `useFetchMagik`, along with `FetchMagikContext` and `FetchMagikProvider` components, which allow you to easily perform HTTP requests and set site-wide configurations within your React components.
 
 ## Features
 
-- `useFetchMagic`: The core hook that handles making HTTP requests. It returns a function, `makeRequest`, to initiate requests, and an object, `makeRequestQuery`, containing the request status (loading, error, data).
+- `useFetchMagik`: The core hook that handles making HTTP requests. It returns a function, `makeRequest`, to initiate requests, and an object, `makeRequestQuery`, containing the request status (loading, error, data).
 
-- `FetchMagicContext` and `FetchMagicProvider`: The context and provider components to set site-wide values like baseURL and headers. They enable you to define common configurations that will be used by all requests.
+- `FetchMagikContext` and `FetchMagikProvider`: The context and provider components to set site-wide values like baseURL and headers. They enable you to define common configurations that will be used by all requests.
 
 ## Installation
 
-To install React Fetch Magic, use npm or yarn:
+To install React Fetch Magik, use npm or yarn:
 
 ```bash
-npm install react-fetch-magic
+npm install react-fetch-magik
 
 # or
 
-yarn add react-fetch-magic
+yarn add react-fetch-magik
 ```
 
 ## Usage
 
-1. Import the `useFetchMagic`, `FetchMagicContext`, and `FetchMagicProvider`:
+1. Import the `useFetchMagik`, `FetchMagikContext`, and `FetchMagikProvider`:
 
 ```javascript
-import { useFetchMagic, FetchMagicContext, FetchMagicProvider } from 'react-fetch-magic';
+import { useFetchMagik, FetchMagikContext, FetchMagikProvider } from 'react-fetch-magik';
 ```
 
-2. Use the `FetchMagicProvider` component to set the site-wide configurations such as baseURL and headers:
+2. Use the `FetchMagikProvider` component to set the site-wide configurations such as baseURL and headers:
 
 ```javascript
-<FetchMagicProvider baseURL="https://api.example.com" headers={{ Authorization: 'Bearer token' }}>
+<FetchMagikProvider baseURL="https://api.example.com" headers={{ Authorization: 'Bearer token' }}>
   {/* Your app components */}
-</FetchMagicProvider>
+</FetchMagikProvider>
 ```
 
-3. Use the `useFetchMagic` hook to perform HTTP requests within your components:
+3. Use the `useFetchMagik` hook to perform HTTP requests within your components:
 
 ```javascript
-const [makeRequest, makeRequestQuery] = useFetchMagic();
+const [makeRequest, makeRequestQuery] = useFetchMagik();
 
 // Trigger a GET request
 makeRequest({ url: '/users' });
@@ -71,8 +71,8 @@ return <div>Make a request to fetch data</div>;
 makeRequest({ url: '/posts', headers: { 'Content-Type': 'application/json' } });
 ```
 
-That's it! You can now easily make HTTP requests and manage the request state using React Fetch Magic in your React applications.
+That's it! You can now easily make HTTP requests and manage the request state using React Fetch Magik in your React applications.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/1kemuefuna/react-fetch-magic/blob/main/LICENSE "LICENSE") file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/1kemuefuna/react-fetch-magik/blob/main/LICENSE "LICENSE") file for details.

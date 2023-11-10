@@ -71,11 +71,11 @@ typeof SuppressedError === "function" ? SuppressedError : function (error, suppr
     return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
 };
 
-var FetchMagicContext = createContext({});
+var FetchMagikContext = createContext({});
 
-function useFetchMagic() {
+function useFetchMagik() {
     var _this = this;
-    var fetchMagicContext = useContext(FetchMagicContext);
+    var fetchMagikContext = useContext(FetchMagikContext);
     var _a = useState(false), loading = _a[0], setLoading = _a[1];
     var _b = useState(null), error = _b[0], setError = _b[1];
     var _c = useState(null), data = _c[0], setData = _c[1];
@@ -87,7 +87,7 @@ function useFetchMagic() {
                     _a.trys.push([0, 3, 4, 5]);
                     setLoading(true);
                     setError(null);
-                    return [4 /*yield*/, fetch("".concat(fetchMagicContext.baseURL).concat(config.url), __assign(__assign({}, config), { headers: __assign(__assign({}, fetchMagicContext.headers), config.headers) }))];
+                    return [4 /*yield*/, fetch("".concat(fetchMagikContext.baseURL).concat(config.url), __assign(__assign({}, config), { headers: __assign(__assign({}, fetchMagikContext.headers), config.headers) }))];
                 case 1:
                     response = _a.sent();
                     if (!response.ok) {
@@ -113,11 +113,11 @@ function useFetchMagic() {
     return [makeRequest, makeRequestQuery];
 }
 
-function FetchMagicProvider(_a) {
+function FetchMagikProvider(_a) {
     var baseURL = _a.baseURL, headers = _a.headers, children = _a.children;
-    var fetchMagicContextValue = { baseURL: baseURL, headers: headers };
-    return (React.createElement(FetchMagicContext.Provider, { value: fetchMagicContextValue }, children));
+    var fetchMagikContextValue = { baseURL: baseURL, headers: headers };
+    return (React.createElement(FetchMagikContext.Provider, { value: fetchMagikContextValue }, children));
 }
 
-export { FetchMagicProvider, useFetchMagic };
+export { FetchMagikProvider, useFetchMagik };
 //# sourceMappingURL=index.es.js.map

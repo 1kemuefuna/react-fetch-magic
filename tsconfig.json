@@ -13,7 +13,7 @@
     "typeRoots": ["./node_modules/@types", "./index.d.ts"],
     "baseUrl": "./",
     "paths": {
-      "react-fetch-magic": ["./src/index.tsx"]
+      "react-fetch-magik": ["./src/index.tsx"]
     }
   },
   "include": ["src", "index.d.ts"],

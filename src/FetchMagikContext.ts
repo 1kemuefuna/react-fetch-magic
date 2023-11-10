@@ -1,9 +1,9 @@
 import React from 'react'
 import { createContext } from 'react';
 
-export interface FetchMagicContextValue {
+export interface FetchMagikContextValue {
     baseURL?: string;
     headers?: { [key: string]: string };
 }
 
-export const FetchMagicContext = createContext<FetchMagicContextValue>({});
+export const FetchMagikContext = createContext<FetchMagikContextValue>({});

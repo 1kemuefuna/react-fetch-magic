@@ -1,2 +1,2 @@
-export * from './useFetchMagic'
-export * from './FetchMagicProvider'
+export * from './useFetchMagik'
+export * from './FetchMagikProvider'

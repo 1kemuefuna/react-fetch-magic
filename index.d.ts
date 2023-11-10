@@ -1,19 +1,19 @@
-declare module 'react-fetch-magic' {
+declare module 'react-fetch-magik' {
   import { ReactNode } from 'react';
 
-  interface FetchMagicContextValue {
+  interface FetchMagikContextValue {
     baseURL?: string;
     headers?: { [key: string]: string };
   }
 
-  export function useFetchMagic<T>(): [(config: RequestInit & { url: string }) => Promise<void>, { loading: boolean, error: Error | null, data: T | null }];
+  export function useFetchMagik<T>(): [(config: RequestInit & { url: string }) => Promise<void>, { loading: boolean, error: Error | null, data: T | null }];
 
-  interface FetchMagicProviderProps {
+  interface FetchMagikProviderProps {
     baseURL?: string;
     headers?: { [key: string]: string };
     children: ReactNode;
   }
 
-  export const FetchMagicContext: React.Context<FetchMagicContextValue>;
-  export const FetchMagicProvider: React.FC<FetchMagicProviderProps>;
+  export const FetchMagikContext: React.Context<FetchMagikContextValue>;
+  export const FetchMagikProvider: React.FC<FetchMagikProviderProps>;
 }
