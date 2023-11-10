@@ -32,8 +32,6 @@ module.exports = {
     commonjs(),
     typescript({
       tsconfig: './tsconfig.json',
-      // declaration: false,
-      // declarationDir: './dist/types',
     }),
   ],
   external: ['react', 'react-dom'],

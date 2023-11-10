@@ -72,6 +72,7 @@ typeof SuppressedError === "function" ? SuppressedError : function (error, suppr
 };
 
 var FetchMagicContext = createContext({});
+
 function useFetchMagic() {
     var _this = this;
     var fetchMagicContext = useContext(FetchMagicContext);
@@ -111,6 +112,7 @@ function useFetchMagic() {
     var makeRequestQuery = { loading: loading, error: error, data: data };
     return [makeRequest, makeRequestQuery];
 }
+
 function FetchMagicProvider(_a) {
     var baseURL = _a.baseURL, headers = _a.headers, children = _a.children;
     var fetchMagicContextValue = { baseURL: baseURL, headers: headers };
